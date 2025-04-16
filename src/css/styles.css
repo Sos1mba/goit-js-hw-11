@@ -19,32 +19,36 @@ body {
 
 /* Стили для формы поиска */
 .form {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .form input {
   padding: 10px 15px;
   font-size: 16px;
-  border: 2px solid #4c4cff;
+  border: 1px solid #808080;
   border-radius: 4px 0 0 4px;
   outline: none;
+  border-radius: 5px;
+}
+
+.form input:hover{
+  border-color: #000000;
 }
 
 .form button {
   padding: 10px 15px;
-  background-color: #4c4cff;
+  background-color: #4E75FF;
   border: none;
   color: white;
   font-size: 16px;
-  border-radius: 0 4px 4px 0;
+  border-radius: 7px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .form button:hover {
-  background-color: #0000ff;
+  background-color: #6C8CFF;
 }
 
 /* Стили для галереи */
@@ -62,8 +66,7 @@ body {
 .gallery-item {
   width: 300px;
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
   overflow: hidden;
   transition: transform 0.3s ease;
 }
