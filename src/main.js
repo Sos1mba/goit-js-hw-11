@@ -12,8 +12,14 @@ form.addEventListener('submit', async (event) => {
   const query = searchInput.value.trim();
   if (!query) {
     iziToast.warning({
-      title: 'Warning',
-      message: 'Please enter a search query!',
+      title: "Sorry, there are no images matching your search query. Please, try again!",
+      titleColor: "#FAFAFB",
+      backgroundColor: '#B51B1B',
+    messageColor: '#EF4040',
+    iconUrl: './img/Group.svg',
+    iconColor: '#ffffff',
+    position: 'topRight',
+    timeout: 5000,
     });
     return;
   }
@@ -27,6 +33,12 @@ form.addEventListener('submit', async (event) => {
       iziToast.info({
         title: 'No Results',
         message: 'No images found for your search.',
+        titleColor: "#FAFAFB",
+        backgroundColor: '#B51B1B',
+      messageColor: '#EF4040',
+      iconColor: '#ffffff',
+      position: 'topRight',
+      timeout: 5000,
       });
     } else {
       createGallery(data.hits);
@@ -35,6 +47,12 @@ form.addEventListener('submit', async (event) => {
     iziToast.error({
       title: 'Error',
       message: 'Something went wrong!',
+      titleColor: "#FAFAFB",
+      backgroundColor: '#B51B1B',
+     messageColor: '#EF4040',
+    iconColor: '#ffffff',
+     position: 'topRight',
+     timeout: 5000,
     });
   } finally {
     hideLoader();
