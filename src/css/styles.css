@@ -64,9 +64,10 @@ body {
 
 /* Элемент галереи */
 .gallery-item {
+  
   width: 300px;
   background-color: white;
- 
+  max-height: 200px;
   overflow: hidden;
   transition: transform 0.3s ease;
 }
@@ -78,6 +79,8 @@ body {
 .gallery-item img {
   width: 100%;
   display: block;
+  max-height: 152px;
+  object-fit: covers;
 }
 
 /* Информация под фото */
@@ -89,8 +92,14 @@ body {
 }
 
 .info p {
-  margin: 5px 0;
-  font-size: 14px;
+  flex-direction: column;
+  display: flex;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  justify-content: center;
 }
 
 /* Loader */
